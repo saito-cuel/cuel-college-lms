@@ -167,16 +167,23 @@ export default function CuelLinkPage() {
       <section className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
         <div className="px-6 py-5 border-b border-slate-100 flex items-center gap-3">
           <Target className="w-5 h-5 text-green-600" />
-          <h2 className="text-lg font-bold text-slate-900">4月のトピック予告</h2>
+          <h2 className="text-lg font-bold text-slate-900">4月の講座・イベント予告</h2>
         </div>
-        <div className="p-6 space-y-3">
-          <p className="text-sm text-slate-600 mb-4">
-            新年度は<strong>「決算と年度の節目を活かす実務力アップ」</strong>がテーマ。年度末・年度始めに必須の知識を実務目線で深掘りします。
-          </p>
-          <UpcomingRow week="第1週" date="4月7日〜11日" title="年度末決算の実務ポイント" current />
-          <UpcomingRow week="第2週" date="4月14日〜18日" title="消費税申告実務（インボイス対応含む）" />
-          <UpcomingRow week="第3週" date="4月21日〜25日" title="freee応用編：仕訳の自動化と効率化" />
-          <UpcomingRow week="第4週" date="4月28日〜30日" title="キャリア戦略WS：新年度の目標設計" />
+        <div className="divide-y divide-slate-100">
+          <CourseRow date="4月11日（土）10:00" title="自分アップデート会 Saturday Morning" plan="standard" noArchive />
+          <CourseRow date="4月11日（土）11:00" title="簿記2級の「暗記」を卒業！60分で本質を掴む 税効果会計の実践講義" plan="standard-single" />
+          <CourseRow date="4月11日（土）13:30" title="【経理上級コース】第6回 内部統制3点セット、業務改善" plan="seminar" />
+          <CourseRow date="4月15日（水）20:00" title="自分アップデート会 Weekday Night" plan="standard" noArchive />
+          <CourseRow date="4月16日（木）20:00" title="キャリアの棚卸し＆強み発見ワークショップ【2名限定・無料】" plan="all" highlight />
+          <CourseRow date="4月18日（土）11:00" title="CuelLink投稿振り返り回 3月/4月" plan="standard-single" />
+        </div>
+        <div className="px-6 py-3 bg-slate-50 border-t border-slate-100">
+          <div className="flex flex-wrap gap-3 text-xs text-slate-500">
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-slate-400 inline-block" />全員参加可</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-primary-600 inline-block" />スタンダード限定</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-orange-400 inline-block" />スタンダード無料・スポット購入可</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-secondary-500 inline-block" />ゼミ授業</span>
+          </div>
         </div>
       </section>
 
@@ -249,10 +256,10 @@ function CourseRow({
   noArchive?: boolean; highlight?: boolean;
 }) {
   const planBadge: Record<PlanType, JSX.Element> = {
-    all: <span className="text-xs bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">全員参加可</span>,
-    standard: <span className="flex items-center gap-1 text-xs bg-primary-600 text-white px-2 py-0.5 rounded-full font-medium"><Lock className="w-3 h-3" />スタンダード限定</span>,
-    'standard-single': <span className="flex items-center gap-1 text-xs bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full font-medium"><Lock className="w-3 h-3" />スタンダード・単回購入可</span>,
-    seminar: <span className="text-xs bg-secondary-100 text-secondary-700 px-2 py-0.5 rounded-full font-medium">ゼミ</span>,
+    all:             <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium">全員参加OK</span>,
+    standard:        <span className="flex items-center gap-1 text-xs bg-primary-600 text-white px-2 py-0.5 rounded-full font-medium"><Lock className="w-3 h-3" />スタンダード限定</span>,
+    'standard-single': <span className="flex items-center gap-1 text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full font-medium"><Lock className="w-3 h-3" />スタンダード無料・スポット購入可</span>,
+    seminar:         <span className="text-xs bg-secondary-100 text-secondary-700 px-2 py-0.5 rounded-full font-medium">ゼミ授業</span>,
   };
 
   return (
