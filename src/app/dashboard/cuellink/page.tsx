@@ -35,6 +35,34 @@ export default function CuelLinkPage() {
         </div>
       </div>
 
+      {/* ─── 文章サマリー ─── */}
+      <section className="bg-white rounded-2xl border border-slate-200 p-8">
+        <div className="flex items-center gap-2 text-primary-600 text-xs font-bold tracking-wide uppercase mb-4">
+          <MessageSquare className="w-4 h-4" />
+          今月のサマリー
+        </div>
+        <h2 className="text-xl font-bold text-slate-900 mb-4">
+          「思考力と専門性を磨く春」—— 3月を振り返って
+        </h2>
+        <div className="space-y-3 text-slate-700 text-sm leading-loose">
+          <p>
+            2026年3月のCuelCollegeは、<strong>税務・管理会計・ロジカルシンキング・キャリア形成</strong>にわたる全10講座を開催しました。年度末という繁忙期にもかかわらず多くのCuelistが学びに参加し、コミュニティのQ&Aでも活発な議論が生まれた充実の一ヶ月でした。
+          </p>
+          <p>
+            特に注目を集めたのは<strong>所得税の「壁」を図解で整理した講座</strong>です。103万・178万円の壁をめぐる税制改正を実務目線でスッキリ整理し、「ようやく全体像がつかめた」という声が多数届きました。また<strong>6名限定のキャリアの棚卸しWS</strong>では、少人数ならではの深い対話が生まれ、参加者同士のつながりも深まりました。
+          </p>
+          <p>
+            スタンダード会員向けには<strong>「齋藤のなんでも相談会」</strong>（アーカイブなし・リアルタイム限定）と<strong>「減損会計＆資産除去債務のキホン」</strong>という2本の限定コンテンツを提供。現場で即使える高度な実務知識を、スタンダード会員だけの特別な時間でお届けしました。
+          </p>
+          <p>
+            コミュニティQ&Aでは<strong>AIリテラシー・法人カード選び・ロジカルシンキングのMECE・Google Workspace管理者権限・AI使ったCF作成・AIツールの会計処理</strong>と、幅広いリアルな実務課題が投稿され、仲間の経験が自分の学びに直結する場面が何度も生まれました。
+          </p>
+          <p>
+            4月は新年度を迎え、<strong>決算実務・消費税申告・freee応用・キャリア戦略</strong>をテーマに実践的な講座が続きます。3月の学びを土台に、一歩先の実務力を身につけていきましょう。
+          </p>
+        </div>
+      </section>
+
       {/* ─── 3月の全講座・イベント ─── */}
       <section className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
         <div className="px-6 py-5 border-b border-slate-100 flex items-center gap-3">
