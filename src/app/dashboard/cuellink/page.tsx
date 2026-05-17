@@ -12,10 +12,20 @@ import {
   ArrowRight,
   Zap,
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CuelLinkPage() {
   return (
     <div className="max-w-3xl mx-auto space-y-6 pb-12">
+
+      {/* ─── 月次ナビゲーション ─── */}
+      <div className="flex items-center justify-between">
+        <span className="text-sm text-slate-300">← 2月号</span>
+        <span className="text-sm font-medium text-slate-500">2026年3月号</span>
+        <Link href="/dashboard/cuellink/april" className="flex items-center gap-1 text-sm text-slate-500 hover:text-primary-600 transition-colors">
+          4月号 →
+        </Link>
+      </div>
 
       {/* ─── 月間Cuelヘッダー ─── */}
       <div className="bg-gradient-to-br from-slate-900 to-primary-900 rounded-2xl p-8 text-white">
