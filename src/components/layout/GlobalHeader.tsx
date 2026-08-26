@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Home, BookOpen, FileText, MessageCircle, Settings, Bell, User, TrendingUp } from 'lucide-react';
+import { Home, BookOpen, FileText, MessageCircle, Settings, Bell, User, TrendingUp, CheckSquare } from 'lucide-react';
 
 export default function GlobalHeader() {
   return (
@@ -21,6 +21,7 @@ export default function GlobalHeader() {
         <NavLink href="/dashboard/works" icon={<FileText size={20} />} label="ワーク" />
         <NavLink href="/dashboard/community" icon={<MessageCircle size={20} />} label="コミュニティ" />
         <NavLink href="/dashboard/cuellink" icon={<TrendingUp size={20} />} label="CuelLink" />
+        <NavLink href="/dashboard/tasks" icon={<CheckSquare size={20} />} label="タスク" />
         <NavLink href="/dashboard/settings" icon={<Settings size={20} />} label="設定" />
       </nav>
 
@@ -53,4 +54,3 @@ function NavLink({ href, icon, label }: { href: string; icon: React.ReactNode; l
     </Link>
   );
 }
-
